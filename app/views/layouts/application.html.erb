@@ -8,7 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+<% if @lock %>
+  <body class="body <%= @lock.locked ? 'locked' : 'open' %>">
+<% else %>
+  <body class="body">
+<% end %>
     <%= yield %>
   </body>
 </html>

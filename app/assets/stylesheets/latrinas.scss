@@ -1,0 +1,17 @@
+// Place all the styles related to the Latrinas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.locked {
+  background-color: #ff0000;
+}
+body.open {
+  background-color: #00ff00;
+}
+#latrina {
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
