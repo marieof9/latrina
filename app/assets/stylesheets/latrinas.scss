@@ -4,9 +4,11 @@
 
 body.locked {
   background-color: #ff0000;
+  overflow: hidden;
 }
 body.open {
   background-color: #00ff00;
+  overflow: hidden;
 }
 #latrina {
   img {
