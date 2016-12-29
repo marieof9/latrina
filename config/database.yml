@@ -12,6 +12,12 @@ default: &default
   password: <%= ENV['POSTGRES_PASSWORD'] %>
   host: <%= ENV.fetch("POSTGRES_HOST") { 'postgres' } %>
 
+staging:
+  <<: *default
+
+production:
+  <<: *default
+
 development:
   <<: *default
   adapter: sqlite3
