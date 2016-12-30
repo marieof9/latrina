@@ -31,11 +31,6 @@ void setup() {
 }
 
 void loop() {
-
-  if (debug == 1) {
-    Serial.println("LatrinaSensor");
-  }
-
   connectToWiFi(networkName, networkPswd);
   
 
@@ -85,7 +80,7 @@ void sendState(const char * methode) {
   }
 
   // This will send the request to the server
-  client.print((String)"" + String(methode) + " /" + String(sensorName) + " HTTP/1.1\r\n" +
+  client.print((String)"" + String(methode) + " /" + String(sensorName) + ".json HTTP/1.1\r\n" +
                "Host: " + String(hostDomain) + "\r\n" +
                "Connection: close\r\n\r\n");
   unsigned long timeout = millis();
